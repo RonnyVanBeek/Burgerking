@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Burgerking", "Burgerking\Burgerking.csproj", "{2B46B61B-B1F7-484E-8EC0-D50E8B14333D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B46B61B-B1F7-484E-8EC0-D50E8B14333D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B46B61B-B1F7-484E-8EC0-D50E8B14333D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B46B61B-B1F7-484E-8EC0-D50E8B14333D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B46B61B-B1F7-484E-8EC0-D50E8B14333D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD6A4D6C-BDD5-4D66-9F4E-384E989B1A6A}
+	EndGlobalSection
+EndGlobal
