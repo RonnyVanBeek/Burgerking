@@ -1,0 +1,26 @@
+﻿@model Burgerking.ViewModels.BurgersViewModel
+@{
+    Layout = "_BurgerkingLayout";
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    @foreach (var b in Model.Burgers)
+    {
+        <div class="card m-4" style="width: 18rem;">
+            <img class="card-img-top" src="~/images/@($"{b.Naam.Replace(" ","").Replace("-","").ToLower()}.png")">
+            <div class="card-body">
+                <h5 class="card-title">@b.Naam</h5>
+                <p class="card-text">Voor slechts @b.Prijs euro!</p>
+                <p class="card-text">Bevat:</p>
+                <p class="card-text">
+                    <ul>
+                        <li>@b.Broodje</li>
+                        <li>@b.Saus</li>
+                        <li>@b.Vlees</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    }
+</div>
