@@ -11,10 +11,13 @@ namespace Burgerking.Controllers
     public class ConsumptieController : Controller
     {
         public List<BurgersViewModel> burgers;
+        public List<DessertsViewModel> desserts;
 
         public ConsumptieController()
         {
             burgers = new List<BurgersViewModel>();
+            desserts = new List<DessertsViewModel>();
+
             burgers.Add(new BurgersViewModel()
             {
                 Naam = "Plant-based Wopper",
@@ -63,12 +66,38 @@ namespace Burgerking.Controllers
                 Saus = "Baconsaus",
                 Vlees = "Kip & spek"
             });
+
+            desserts.Add(new DessertsViewModel()
+            {
+                Naam = "BK Fusions",
+                Prijs = 2.75,
+                BevatSoja = true
+            });
+            desserts.Add(new DessertsViewModel()
+            {
+                Naam = "Donuts",
+                Prijs = 2.45,
+                BevatSoja = true
+            });
+            desserts.Add(new DessertsViewModel()
+            {
+                Naam = "Mini pancakes",
+                Prijs = 2.95,
+                BevatSoja = false
+            });
         }
 
         public IActionResult BurgerOverzicht()
         {
             BurgersViewModel viewModel = new BurgersViewModel();
             viewModel.Burgers = burgers;
+            return View(viewModel);
+        }
+
+        public IActionResult DessertOverzicht()
+        {
+            DessertsViewModel viewModel = new DessertsViewModel();
+            viewModel.Desserts = desserts;
             return View(viewModel);
         }
     }
