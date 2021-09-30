@@ -103,6 +103,34 @@ namespace Burgerking.Controllers
             return View(viewModel);
         }
 
+        public IActionResult SearchBurger(BurgersViewModel viewModel)
+        {
+            if (!string.IsNullOrEmpty(viewModel.BurgerSearch))
+            {
+                string zoek = viewModel.BurgerSearch.ToLower();
+                viewModel.Burgers = burgers.Where(b => b.Naam.ToLower().Contains(zoek)).ToList();
+            }
+            else
+            {
+                viewModel.Burgers = burgers;
+            }
+            return View("BurgerOverzicht", viewModel);
+        }
+
+        public IActionResult SearchDessert(DessertsViewModel viewModel)
+        {
+            if (!string.IsNullOrEmpty(viewModel.DessertSearch))
+            {
+                string zoek = viewModel.DessertSearch.ToLower();
+                viewModel.Desserts = desserts.Where(b => b.Naam.ToLower().Contains(zoek)).ToList();
+            }
+            else
+            {
+                viewModel.Desserts = desserts;
+            }
+            return View("DessertOverzicht", viewModel);
+        }
+
         public IActionResult DessertOverzicht()
         {
             DessertsViewModel viewModel = new DessertsViewModel();
