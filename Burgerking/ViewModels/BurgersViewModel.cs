@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Burgerking.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Burgerking.ViewModels
         public string Vlees { get; set; }
         public string Saus { get; set; }
 
-        //public string BurgerSearch { get; set; }
-        public List<BurgersViewModel> Burgers { get; set; }
+        public string BurgerSearch { get; set; }
+        public List<Burgers> Burgers { get; set; }
     }
 }

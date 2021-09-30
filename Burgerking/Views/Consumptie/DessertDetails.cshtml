@@ -1,0 +1,13 @@
+﻿@model Burgerking.ViewModels.DessertsViewModel
+
+<h1>@Model.Naam</h1>
+<br />
+<img class="card-img-top" style="width: 18rem;" src="~/images/@($"{Model.Naam.Replace(" ","").Replace("-","").ToLower()}.png")">
+<br />
+<p>
+    <b>Prijs: </b>@Model.Prijs euro
+    <br /><br />
+<p class="text-danger">@Model.Soja(Model.BevatSoja)</p>
+</p>
+
+@Html.ActionLink("Terug", "DessertOverzicht", "Consumptie")

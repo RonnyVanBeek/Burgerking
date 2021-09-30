@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Burgerking.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,8 +12,8 @@ namespace Burgerking.ViewModels
         public double Prijs { get; set; }
         public bool BevatSoja { get; set; }
 
-        //public string BurgerSearch { get; set; }
-        public List<DessertsViewModel> Desserts { get; set; }
+        public string DessertSearch { get; set; }
+        public List<Desserts> Desserts { get; set; }
 
         public string Soja(bool soja)
         {

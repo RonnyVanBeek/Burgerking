@@ -13,7 +13,8 @@
                 <h5 class="card-title">@d.Naam</h5>
                 <p class="card-text">Voor slechts @d.Prijs euro!</p>
                 <p class="card-text text-danger">@d.Soja(d.BevatSoja)</p>
-            </div>
+                <p class="card-text"><a asp-controller="Consumptie" asp-action="DessertDetails" asp-route-id="@d.Id">Details</a></p>
+            </div>            
         </div>
     }
 </div>

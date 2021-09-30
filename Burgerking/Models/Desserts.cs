@@ -11,5 +11,15 @@ namespace Burgerking.Models
         public string Naam { get; set; }
         public double Prijs { get; set; }
         public bool BevatSoja { get; set; }
+
+        public string Soja(bool soja)
+        {
+            string text = "";
+            if (soja)
+            {
+                text = "Bevat soja!";
+            }
+            return text;
+        }
     }
 }
